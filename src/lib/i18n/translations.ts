@@ -109,11 +109,11 @@ export const translations = {
     workflowContent: "Simple 3-step process: Upload your media file, edit with precision tools, then download your trimmed video or audio instantly."
   },
   zh: {
-    // 应用信息
-    appName: "音频修剪器",
-    title: "音频编辑器",
-    pageTitle: "音频修剪转换器 | 音频编辑器",
-    description: "拖拽您的媒体文件或点击浏览开始。大文件将自动分割。",
+    // 应用信息 - SEO优化
+    appName: "媒体修剪器",
+    title: "视频转音频工具 - 免费在线音频剪切器",
+    pageTitle: "免费视频转音频工具 | 从视频提取音频，剪切编辑，多格式导出",
+    description: "免费在线视频转音频工具。从视频提取音频，剪切音频片段，转换格式。支持MP4转MP3，音频剪切，导出多种格式。无需上传服务器。",
 
     // 导航
     navFeatures: "功能特性",
@@ -122,9 +122,9 @@ export const translations = {
     navLegal: "法律条款",
     openEditor: "打开编辑器",
 
-    // 首页内容
-    heroHeading: "音频修剪转换器",
-    heroSubheading: "在浏览器中直接修剪、转换和编辑音频文件。无需上传。",
+    // 首页内容 - SEO优化
+    heroHeading: "从视频提取音频，剪切音频文件",
+    heroSubheading: "视频转音频，剪切音频片段，导出多种格式（MP3、WAV、AAC）。所有处理在您的浏览器中进行，无需上传。",
     heroGetStarted: "开始使用",
     heroLearnMore: "了解更多",
     tagline: "音频编辑器",
@@ -212,17 +212,17 @@ export const translations = {
     // ErrorBoundary
     somethingWentWrong: "出现了错误",
     
-    // 首页内容
-    freeWhileBeta: "测试期间免费",
-    featuresContent: "浏览器中强大的音频编辑功能。",
-    workflowContent: "简单的拖拽工作流，轻松编辑。"
+    // 首页内容 - SEO优化
+    freeWhileBeta: "100% 免费 - 无需注册",
+    featuresContent: "从视频文件提取音频，剪切音频片段，格式转换。上传MP4/AVI/MOV视频提取为MP3/WAV/AAC音频。精确的音频编辑，多种导出选项。",
+    workflowContent: "简单的三步流程：上传您的媒体文件，使用精确工具编辑，然后立即下载修剪后的视频或音频。"
   },
   ja: {
-    // 应用信息
-    appName: "オーディオトリマー",
-    title: "オーディオエディター",
-    pageTitle: "オーディオトリマー & コンバーター | オーディオエディター",
-    description: "メディアファイルをドラッグ&ドロップするか、参照をクリックして開始してください。大きなファイルは自動的に分割されます。",
+    // 応用情報 - SEO最適化
+    appName: "メディアトリム",
+    title: "動画音声変換ツール - 無料オンライン音声カッター",
+    pageTitle: "無料動画音声変換ツール | 動画から音声抽出、カット編集、複数形式出力",
+    description: "無料オンライン動画音声変換ツール。動画から音声を抽出、音声セグメントをカット、形式変換。MP4からMP3、音声カット、複数形式出力対応。サーバーアップロード不要。",
 
     // 导航
     navFeatures: "機能",
@@ -231,9 +231,9 @@ export const translations = {
     navLegal: "法的事項",
     openEditor: "エディターを開く",
 
-    // 首页内容
-    heroHeading: "オーディオトリマー＆コンバーター",
-    heroSubheading: "ブラウザでオーディオファイルを直接トリミング、変換、編集。アップロード不要。",
+    // ホームページ内容 - SEO最適化
+    heroHeading: "動画から音声を抽出、音声ファイルをトリミング",
+    heroSubheading: "動画を音声に変換、音声セグメントをカット、複数形式（MP3、WAV、AAC）で出力。すべての処理はブラウザ内で実行、アップロード不要。",
     heroGetStarted: "始める",
     heroLearnMore: "詳しく見る",
     tagline: "オーディオエディター",
@@ -321,10 +321,10 @@ export const translations = {
     // ErrorBoundary
     somethingWentWrong: "エラーが発生しました",
     
-    // ホームページ内容
-    freeWhileBeta: "ベータ期間中は無料",
-    featuresContent: "ブラウザで強力なオーディオ編集機能。",
-    workflowContent: "簡単なドラッグ&ドロップのワークフロー。"
+    // ホームページ内容 - SEO最適化
+    freeWhileBeta: "100% 無料 - 登録不要",
+    featuresContent: "動画ファイルから音声を抽出、音声セグメントをカット、形式変換。MP4/AVI/MOVをアップロードしてMP3/WAV/AAC音声として抽出。精密な音声編集、複数出力オプション。",
+    workflowContent: "シンプルな3ステッププロセス：メディアファイルをアップロードし、精密ツールで編集し、トリミングされた動画または音声を即座にダウンロードします。"
   }
 };
 
