@@ -3,8 +3,8 @@ export const translations = {
     // 应用信息 - SEO优化
     appName: "MediaTrim",
     title: "Video & Audio Editor - Free Online Trimmer",
-    pageTitle: "Free Online Video & Audio Trimmer | Cut, Convert & Edit Media Files",
-    description: "Free online video and audio trimmer. Cut, trim, convert and edit media files directly in your browser. No upload required. Supports MP4, MP3, WAV, and more formats.",
+    pageTitle: "Free Video to Audio Converter & Trimmer | Extract Audio from Video, Cut & Edit",
+    description: "Free online tool to extract audio from video, trim audio files, and convert between formats. Convert MP4 to MP3, cut audio segments, export in multiple formats. No upload to servers.",
 
     // 导航
     navFeatures: "Features",
@@ -14,8 +14,8 @@ export const translations = {
     openEditor: "Open Editor",
 
     // 首页内容 - SEO优化
-    heroHeading: "Free Online Video & Audio Trimmer",
-    heroSubheading: "Cut, trim, and convert video and audio files instantly. Professional editing tools in your browser with no downloads or uploads required.",
+    heroHeading: "Extract Audio from Video & Trim Audio Files",
+    heroSubheading: "Convert video to audio, trim and cut audio segments, export in multiple formats (MP3, WAV, AAC). All processing happens in your browser - no uploads required.",
     heroGetStarted: "Start Editing",
     heroLearnMore: "How It Works",
     tagline: "Video & Audio Editor",
@@ -105,7 +105,7 @@ export const translations = {
     
     // 首页内容 - SEO优化
     freeWhileBeta: "100% Free - No Registration Required",
-    featuresContent: "Professional video and audio editing tools including trimming, cutting, format conversion, and more. Works with MP4, AVI, MOV, MP3, WAV, and dozens of other formats.",
+    featuresContent: "Extract audio from video files, trim and cut audio segments, convert between formats. Upload MP4/AVI/MOV videos to extract audio as MP3/WAV/AAC. Precision audio editing with multiple export options.",
     workflowContent: "Simple 3-step process: Upload your media file, edit with precision tools, then download your trimmed video or audio instantly."
   },
   zh: {

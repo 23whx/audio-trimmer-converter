@@ -10,8 +10,8 @@ export interface Props {
 
 const { title, description, keywords, ogImage, canonical, lang = 'en' } = Astro.props;
 
-// 默认关键词 - 针对视频和音频编辑优化
-const defaultKeywords = "video trimmer, audio editor, online video cutter, free media converter, trim video online, cut audio, video editor browser, MP4 trimmer, audio converter, media editing tool";
+// 默认关键词 - 针对视频转音频、音频剪切、多格式导出优化
+const defaultKeywords = "video to audio converter, extract audio from video, MP4 to MP3, audio trimmer, cut audio online, trim audio file, audio editor, export MP3 WAV AAC, video audio extraction, online audio converter";
 
 const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 const siteUrl = Astro.site || 'https://audio-trimmer-converter.vercel.app';
