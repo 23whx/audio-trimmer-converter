@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
+// import vercel from '@astrojs/vercel/serverless'; // 完全移除Vercel适配器导入
 
 export default defineConfig({
   output: 'static', // 静态部署模式，避免服务器端渲染问题

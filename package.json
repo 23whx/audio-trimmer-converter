@@ -24,7 +24,6 @@
   "dependencies": {
     "@astrojs/react": "^4.3.1",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^7.0.0",
     "@ffmpeg/core": "0.12.6",
     "@ffmpeg/ffmpeg": "0.12.10",
     "@ffmpeg/util": "0.12.1",
