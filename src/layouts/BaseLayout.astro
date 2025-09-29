@@ -1,4 +1,5 @@
 ﻿---
+import SEOHead from '../components/seo/SEOHead.astro';
 import HeadHrefLangs from '../components/seo/HeadHrefLangs.astro';
 import SiteHeader from '../components/layout/SiteHeader.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
@@ -6,8 +7,11 @@ import LanguageInitializer from '../components/LanguageInitializer';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/language-manager';
 
 const {
-  title = 'Audio Trimmer & Converter',
-  description = 'Trim, convert, compress, and subtitle audio directly in your browser.',
+  title = 'Free Online Video & Audio Trimmer | Cut, Convert & Edit Media Files',
+  description = 'Free online video and audio trimmer. Cut, trim, convert and edit media files directly in your browser. No upload required. Supports MP4, MP3, WAV, and more formats.',
+  keywords,
+  ogImage,
+  canonical,
   lang = 'en'
 } = Astro.props;
 console.log('[BaseLayout] props:', { title, lang });
@@ -18,10 +22,14 @@ const currentLocale = SUPPORTED_LOCALES.includes(lang) ? lang as SupportedLocale
 
 <html lang={Astro.props.lang ?? 'en'}>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <SEOHead 
+      title={title}
+      description={description}
+      keywords={keywords}
+      ogImage={ogImage}
+      canonical={canonical}
+      lang={lang}
+    />
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />

@@ -1,10 +1,10 @@
 export const translations = {
   en: {
-    // 应用信息
-    appName: "AudioTrim",
-    title: "Audio editor",
-    pageTitle: "Audio Trimmer & Converter | Audio editor",
-    description: "Drag & drop your media or browse files to begin. Large files will be split automatically.",
+    // 应用信息 - SEO优化
+    appName: "MediaTrim",
+    title: "Video & Audio Editor - Free Online Trimmer",
+    pageTitle: "Free Online Video & Audio Trimmer | Cut, Convert & Edit Media Files",
+    description: "Free online video and audio trimmer. Cut, trim, convert and edit media files directly in your browser. No upload required. Supports MP4, MP3, WAV, and more formats.",
 
     // 导航
     navFeatures: "Features",
@@ -13,16 +13,16 @@ export const translations = {
     navLegal: "Legal",
     openEditor: "Open Editor",
 
-    // 首页内容
-    heroHeading: "Audio Trimmer & Converter",
-    heroSubheading: "Trim, convert, and edit audio files directly in your browser. No uploads needed.",
-    heroGetStarted: "Get Started",
-    heroLearnMore: "Learn More",
-    tagline: "Audio Editor",
+    // 首页内容 - SEO优化
+    heroHeading: "Free Online Video & Audio Trimmer",
+    heroSubheading: "Cut, trim, and convert video and audio files instantly. Professional editing tools in your browser with no downloads or uploads required.",
+    heroGetStarted: "Start Editing",
+    heroLearnMore: "How It Works",
+    tagline: "Video & Audio Editor",
 
-    // 编辑器页面
-    uploadHeading: "Upload audio or video",
-    uploadButton: "Select file",
+    // 编辑器页面 - SEO优化
+    uploadHeading: "Upload Video or Audio File",
+    uploadButton: "Choose Media File",
 
     // 编辑器界面
     audioEditor: "Audio Editor",
@@ -104,10 +104,10 @@ export const translations = {
     // ErrorBoundary
     somethingWentWrong: "Something went wrong",
     
-    // 首页内容
-    freeWhileBeta: "Free while in beta",
-    featuresContent: "Powerful audio editing features right in your browser.",
-    workflowContent: "Simple drag-and-drop workflow for effortless editing."
+    // 首页内容 - SEO优化
+    freeWhileBeta: "100% Free - No Registration Required",
+    featuresContent: "Professional video and audio editing tools including trimming, cutting, format conversion, and more. Works with MP4, AVI, MOV, MP3, WAV, and dozens of other formats.",
+    workflowContent: "Simple 3-step process: Upload your media file, edit with precision tools, then download your trimmed video or audio instantly."
   },
   zh: {
     // 应用信息

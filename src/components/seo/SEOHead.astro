@@ -1,0 +1,79 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string;
+  lang?: string;
+}
+
+const { title, description, keywords, ogImage, canonical, lang = 'en' } = Astro.props;
+
+// 默认关键词 - 针对视频和音频编辑优化
+const defaultKeywords = "video trimmer, audio editor, online video cutter, free media converter, trim video online, cut audio, video editor browser, MP4 trimmer, audio converter, media editing tool";
+
+const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
+const siteUrl = Astro.site || 'https://audio-trimmer-converter.vercel.app';
+const fullCanonical = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
+const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/favicon-180x180.png`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={finalKeywords} />
+<meta name="robots" content="index, follow" />
+<meta name="language" content={lang} />
+<meta name="author" content="MediaTrim" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={fullCanonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={fullCanonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullOgImage} />
+<meta property="og:site_name" content="MediaTrim - Free Video & Audio Editor" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={fullCanonical} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={fullOgImage} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "MediaTrim - Free Video & Audio Editor",
+  "description": "Free online video and audio trimmer. Cut, trim, convert and edit media files directly in your browser.",
+  "url": "{siteUrl}",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Video Trimming",
+    "Audio Editing", 
+    "Format Conversion",
+    "Browser-based Processing",
+    "No Upload Required",
+    "Free to Use"
+  ],
+  "browserRequirements": "Modern web browser with JavaScript enabled"
+}
+</script>

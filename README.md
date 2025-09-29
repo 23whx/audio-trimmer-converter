@@ -1,15 +1,18 @@
-# Audio Trimmer & Converter
+# MediaTrim - Free Online Video & Audio Editor
 
-一个基于浏览器的音频编辑工具，支持音频剪辑、转换和处理，无需上传文件到服务器。
+🎬 **Professional video and audio editing directly in your browser!** Cut, trim, convert and edit media files without downloading software or uploading to servers. Supports MP4, AVI, MOV, MP3, WAV, and dozens of other formats.
 
-## 🎯 功能特性
+## 🚀 Key Features
 
-- 🎵 **音频剪辑** - 精确的音频片段选择和剪切
-- 🔄 **格式转换** - 支持多种音频格式转换
-- 🎛️ **实时预览** - 波形显示和实时音频播放
-- 🌍 **多语言支持** - 支持中文、英文、日文
-- 📱 **响应式设计** - 适配桌面和移动设备
-- 🔒 **隐私安全** - 所有处理在浏览器本地完成
+- 🎥 **Video Trimming** - Precise video cutting and editing with frame-by-frame accuracy
+- 🎵 **Audio Editing** - Professional audio trimming, cutting and format conversion
+- 🔄 **Format Conversion** - Convert between MP4, AVI, MOV, MP3, WAV, and more
+- 🎛️ **Real-time Preview** - Waveform visualization and instant media playback
+- 🌍 **Multi-language** - English, Chinese, Japanese interface
+- 📱 **Mobile-Friendly** - Works on desktop, tablet, and mobile devices
+- 🔒 **Privacy First** - All processing happens locally in your browser
+- ⚡ **No Upload Required** - Edit files directly without server uploads
+- 💰 **100% Free** - No registration, watermarks, or hidden fees
 
 ## 🛠️ 技术栈
 
