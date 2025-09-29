@@ -99,7 +99,6 @@ export const translations = {
     pause: "Pause",
     sampleRate: "Sample rate",
     channels: "Channels",
-    segments: "Segments",
     
     // ErrorBoundary
     somethingWentWrong: "Something went wrong",
@@ -209,7 +208,6 @@ export const translations = {
     pause: "停顿",
     sampleRate: "采样率",
     channels: "声道",
-    segments: "片段",
     
     // ErrorBoundary
     somethingWentWrong: "出现了错误",
@@ -319,7 +317,6 @@ export const translations = {
     pause: "無音",
     sampleRate: "サンプルレート",
     channels: "チャンネル",
-    segments: "セグメント",
     
     // ErrorBoundary
     somethingWentWrong: "エラーが発生しました",

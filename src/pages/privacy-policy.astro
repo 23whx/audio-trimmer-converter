@@ -1,27 +1,25 @@
 ﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import i18next, { t } from 'i18next';
 import '../styles/tailwind.css';
-import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/locales';
+import { SUPPORTED_LOCALES, type SupportedLocale, DEFAULT_LOCALE } from '../lib/i18n/language-manager';
+import { translations } from '../lib/i18n/translations';
 
 type Props = {
   locale?: SupportedLocale;
 };
 
-const { locale = SUPPORTED_LOCALES[0] } = Astro.props as Props;
-
-if (i18next.language !== locale) {
-  await i18next.changeLanguage(locale);
-}
+const { locale = DEFAULT_LOCALE } = Astro.props as Props;
+const t = (key: keyof typeof translations[SupportedLocale]) =>
+  translations[locale][key] || translations[DEFAULT_LOCALE][key] || key;
 ---
 
 <BaseLayout
-  title={`${t('common:footer.privacy')} | ${t('common:appName')}`}
-  description={t('common:footer.privacy')}
-  lang={i18next.language}
+  title={`Privacy Policy | ${t('appName')}`}
+  description="Privacy Policy"
+  lang={locale}
 >
   <article class="prose prose-sm max-w-3xl space-y-4 pt-28">
-    <h1 class="text-3xl font-bold text-success-dark">{t('common:footer.privacy')}</h1>
+    <h1 class="text-3xl font-bold text-success-dark">Privacy Policy</h1>
     <p class="text-sm text-neutral-dark/80">
       We respect your privacy. Processed audio never leaves your browser unless you enable cloud
       exports. Usage analytics are aggregated and anonymized.

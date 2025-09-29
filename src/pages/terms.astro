@@ -1,27 +1,25 @@
 ﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import i18next, { t } from 'i18next';
 import '../styles/tailwind.css';
-import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/locales';
+import { SUPPORTED_LOCALES, type SupportedLocale, DEFAULT_LOCALE } from '../lib/i18n/language-manager';
+import { translations } from '../lib/i18n/translations';
 
 type Props = {
   locale?: SupportedLocale;
 };
 
-const { locale = SUPPORTED_LOCALES[0] } = Astro.props as Props;
-
-if (i18next.language !== locale) {
-  await i18next.changeLanguage(locale);
-}
+const { locale = DEFAULT_LOCALE } = Astro.props as Props;
+const t = (key: keyof typeof translations[SupportedLocale]) =>
+  translations[locale][key] || translations[DEFAULT_LOCALE][key] || key;
 ---
 
 <BaseLayout
-  title={`${t('common:footer.terms')} | ${t('common:appName')}`}
-  description={t('common:footer.terms')}
-  lang={i18next.language}
+  title={`Terms of Service | ${t('appName')}`}
+  description="Terms of Service"
+  lang={locale}
 >
   <article class="prose prose-sm max-w-3xl space-y-4 pt-28">
-    <h1 class="text-3xl font-bold text-success-dark">{t('common:footer.terms')}</h1>
+    <h1 class="text-3xl font-bold text-success-dark">Terms of Service</h1>
     <p class="text-sm text-neutral-dark/80">
       By using Audio Trimmer & Converter you agree to process media you own or are licensed to use.
       Features that rely on third-party services remain subject to their terms.
