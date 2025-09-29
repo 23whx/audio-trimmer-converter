@@ -1,12 +1,7 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  },
+  "framework": "astro",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
-  "framework": "astro",
   "rewrites": [
     {
       "source": "/zh/(.*)",
@@ -15,10 +10,6 @@
     {
       "source": "/ja/(.*)",
       "destination": "/ja/$1"
-    },
-    {
-      "source": "/((?!api).*)",
-      "destination": "/$1"
     }
   ],
   "headers": [
@@ -48,7 +39,7 @@
       ]
     },
     {
-      "source": "/.*\\.(wasm)$",
+      "source": "/(.*)\\.wasm$",
       "headers": [
         {
           "key": "Content-Type",
