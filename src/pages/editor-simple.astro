@@ -2,38 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EditorShell from '../components/editor/EditorShell';
 import '../styles/tailwind.css';
-
-const copy = {
-  upload: {
-    heading: "Upload audio or video",
-    description: "Drag & drop your media or browse files to begin. Large files will be split automatically.",
-    button: "Select file",
-  },
-  timeline: {
-    trim: "Trim selection",
-    split: "Split automatically",
-    normalize: "Normalize",
-    detectSilence: "Detect pauses",
-    generateSubtitles: "Generate subtitles",
-  },
-  export: {
-    heading: "Export",
-    format: "Choose format",
-    quality: "Quality",
-    download: "Download",
-    subtitle: "Download subtitles",
-  },
-  status: {
-    loading: "Preparing workspace…",
-    splitting: "Splitting large file…",
-    compressing: "Applying lossless compression…",
-    detectingSilence: "Detecting pauses…",
-    transcribing: "Transcribing audio…",
-    exporting: "Packing downloads…",
-    ready: "Ready",
-    error: "Error",
-  },
-};
 ---
 
 <BaseLayout
@@ -41,9 +9,7 @@ const copy = {
   description="Drag & drop your media or browse files to begin. Large files will be split automatically."
   lang="en"
 >
-  <section class="space-y-6 pt-28">
-    <h1 class="text-3xl font-bold text-success-dark">Audio editor</h1>
-    <p class="max-w-2xl text-sm text-neutral-dark/80">Drag & drop your media or browse files to begin. Large files will be split automatically.</p>
-    <EditorShell copy={copy} client:load />
+  <section>
+    <EditorShell client:only="react" />
   </section>
 </BaseLayout>
