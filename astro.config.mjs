@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
-  output: 'static',
+  output: 'static', // 静态部署模式，避免服务器端渲染问题
   // adapter: vercel(), // 临时注释掉，先尝试静态部署
   integrations: [
     react(),

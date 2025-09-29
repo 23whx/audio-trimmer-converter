@@ -2,6 +2,7 @@
   "framework": "astro",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
+  "installCommand": "pnpm install",
   "rewrites": [
     {
       "source": "/zh/(.*)",
