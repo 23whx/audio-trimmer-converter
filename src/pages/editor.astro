@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EditorShell from '../components/editor/EditorShell';
+import '../styles/tailwind.css';
+import { translations } from '../lib/i18n/translations';
+// 为避免 TS 转换问题，这里使用纯 JS 逻辑并增加调试日志
+const props = (Astro.props ?? {});
+const rawLocale = props.locale ?? 'en';
+const locale = (['en','zh','ja'].includes(rawLocale) ? rawLocale : 'en');
+console.log('[editor.astro] rendering /editor with locale =', locale);
+const t = translations[locale] || translations.en;
+
+// EditorShell 现在内部管理翻译，不需要传递 copy 参数
+---
+
+<BaseLayout
+  title={t.pageTitle}
+  description={t.description}
+  lang={locale}
+>
+  <section>
+    <EditorShell client:only="react" />
+  </section>
+</BaseLayout>

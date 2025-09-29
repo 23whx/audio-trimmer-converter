@@ -1,0 +1,16 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: theme('colors.neutral.light');
+}
+
+body {
+  @apply bg-neutral-light text-neutral-dark font-sans antialiased;
+}
+
+main {
+  @apply mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 pb-16 pt-24 sm:px-6 lg:px-8;
+}

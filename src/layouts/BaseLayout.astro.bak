@@ -1,0 +1,27 @@
+---
+import HeadHrefLangs from '../components/seo/HeadHrefLangs.astro';
+import SiteHeader from '../components/layout/SiteHeader.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+const {
+  title = 'Audio Trimmer & Converter',
+  description = 'Trim, convert, compress, and subtitle audio directly in your browser.',
+} = Astro.props;
+---
+
+<html lang={Astro.props.lang ?? 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <HeadHrefLangs />
+  </head>
+  <body class="min-h-screen bg-neutral-light text-neutral-dark">
+    <SiteHeader />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

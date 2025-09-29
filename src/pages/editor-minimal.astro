@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/tailwind.css';
+---
+
+<BaseLayout
+  title="Audio Trimmer & Converter | Audio editor"
+  description="Drag & drop your media or browse files to begin. Large files will be split automatically."
+  lang="en"
+>
+  <section class="space-y-6 pt-28">
+    <h1 class="text-3xl font-bold text-success-dark">Audio editor</h1>
+    <p class="max-w-2xl text-sm text-neutral-dark/80">Drag & drop your media or browse files to begin. Large files will be split automatically.</p>
+
+    <div class="flex flex-col gap-6">
+      <section class="rounded-xl border-2 border-dashed border-neutral-dark/20 bg-primary p-8 text-center">
+        <div class="mx-auto flex max-w-lg flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-success-dark">Upload audio or video</h2>
+          <p class="text-sm text-neutral-dark/80">Drag & drop your media or browse files to begin. Large files will be split automatically.</p>
+          <button
+            type="button"
+            class="rounded-full bg-success-dark px-6 py-3 text-sm font-semibold text-primary shadow"
+          >
+            Select file
+          </button>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

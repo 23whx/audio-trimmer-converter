@@ -1,0 +1,40 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import i18next, { t } from 'i18next';
+import '../styles/tailwind.css';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/locales';
+
+type Props = {
+  locale?: SupportedLocale;
+};
+
+const { locale = SUPPORTED_LOCALES[0] } = Astro.props as Props;
+
+if (i18next.language !== locale) {
+  await i18next.changeLanguage(locale);
+}
+---
+
+<BaseLayout
+  title={`${t('common:footer.terms')} | ${t('common:appName')}`}
+  description={t('common:footer.terms')}
+  lang={i18next.language}
+>
+  <article class="prose prose-sm max-w-3xl space-y-4 pt-28">
+    <h1 class="text-3xl font-bold text-success-dark">{t('common:footer.terms')}</h1>
+    <p class="text-sm text-neutral-dark/80">
+      By using Audio Trimmer & Converter you agree to process media you own or are licensed to use.
+      Features that rely on third-party services remain subject to their terms.
+    </p>
+    <h2 class="text-xl font-semibold text-success-dark">Usage</h2>
+    <p class="text-sm text-neutral-dark/80">
+      Do not upload unlawful content. Respect intellectual property and privacy laws in your
+      jurisdiction.
+    </p>
+    <h2 class="text-xl font-semibold text-success-dark">Liability</h2>
+    <p class="text-sm text-neutral-dark/80">
+      The service is provided "as is" without warranties. We are not liable for damages resulting
+      from misuse.
+    </p>
+  </article>
+</BaseLayout>

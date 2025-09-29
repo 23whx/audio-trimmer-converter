@@ -1,0 +1,45 @@
+﻿---
+import HeadHrefLangs from '../components/seo/HeadHrefLangs.astro';
+import SiteHeader from '../components/layout/SiteHeader.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+import LanguageInitializer from '../components/LanguageInitializer';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/language-manager';
+
+const {
+  title = 'Audio Trimmer & Converter',
+  description = 'Trim, convert, compress, and subtitle audio directly in your browser.',
+  lang = 'en'
+} = Astro.props;
+console.log('[BaseLayout] props:', { title, lang });
+
+// 确保lang是支持的语言类型
+const currentLocale = SUPPORTED_LOCALES.includes(lang) ? lang as SupportedLocale : 'en';
+---
+
+<html lang={Astro.props.lang ?? 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon-180x180.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#22C55E" />
+    <HeadHrefLangs />
+  </head>
+  <body class="min-h-screen bg-neutral-light text-neutral-dark">
+    <script>
+      console.log('[BaseLayout] client boot with lang =', document.documentElement.lang);
+    </script>
+    <LanguageInitializer currentLocale={currentLocale} client:load />
+    <SiteHeader />
+    <main class="pt-20">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

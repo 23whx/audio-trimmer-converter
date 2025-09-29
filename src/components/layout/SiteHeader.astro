@@ -1,0 +1,98 @@
+﻿---
+import {
+  detectLocaleFromPath,
+  getLocalizedPath,
+  type SupportedLocale,
+  SUPPORTED_LOCALES,
+  DEFAULT_LOCALE
+} from '../../lib/i18n/language-manager';
+import { translations } from '../../lib/i18n/translations';
+import LanguageSwitcher from '../LanguageSwitcher';
+
+const pathname = Astro.url.pathname || '/';
+
+// 确定当前语言：优先从参数，其次从路径，最后使用默认
+function normalizeLocale(candidate: unknown): SupportedLocale | null {
+  return typeof candidate === 'string' && SUPPORTED_LOCALES.includes(candidate as SupportedLocale)
+    ? (candidate as SupportedLocale)
+    : null;
+}
+
+const fromParams = normalizeLocale(Astro.params.lang);
+const fromPath = normalizeLocale(detectLocaleFromPath(pathname));
+const currentLocale: SupportedLocale = fromParams ?? fromPath ?? DEFAULT_LOCALE;
+
+// 获取当前语言的翻译
+const t = (key: keyof typeof translations[SupportedLocale]) =>
+  translations[currentLocale][key] || translations[DEFAULT_LOCALE][key] || key;
+
+// Generate localized links
+const homeLink = getLocalizedPath('/', currentLocale);
+const editorLink = getLocalizedPath('/editor', currentLocale);
+
+const navLinks = [
+  { href: `${homeLink}#features`, label: t('navFeatures') },
+  { href: `${homeLink}#workflow`, label: t('navWorkflow') },
+  { href: `${homeLink}#pricing`, label: t('navPricing') },
+  { href: `${homeLink}#policies`, label: t('navLegal') },
+];
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 border-b border-success/30 bg-neutral-light/90 backdrop-blur"
+>
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href={homeLink} class="flex items-center gap-2">
+      <span
+        class="rounded-full bg-success-dark/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary"
+        >{t('appName')}</span
+      >
+    </a>
+    <nav class="hidden items-center gap-6 text-sm font-medium text-neutral-dark/80 md:flex">
+      {
+        navLinks.map((item) => (
+          <a href={item.href} class="transition hover:text-success-dark">
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="flex items-center gap-3">
+      <!-- Contact Links -->
+      <div class="hidden md:flex items-center gap-2">
+        <a
+          href="mailto:wanghongxiang23@gmail.com"
+          class="p-2 text-neutral-dark/70 hover:text-success-dark transition-colors"
+          title="Email: wanghongxiang23@gmail.com"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+        </a>
+        <a
+          href="https://x.com/Rollkey4"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 text-neutral-dark/70 hover:text-success-dark transition-colors"
+          title="X: @Rollkey4"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+          </svg>
+        </a>
+      </div>
+
+      <a
+        href={editorLink}
+        class="hidden rounded-full bg-accent-dark px-4 py-2 text-sm font-semibold text-primary shadow-sm transition hover:bg-accent md:inline-block"
+        >{t('openEditor')}</a
+      >
+      <LanguageSwitcher
+        className="rounded-full border border-neutral-dark/20 bg-primary px-3 py-2 text-xs font-medium text-neutral-dark shadow-sm transition hover:border-success-dark"
+        currentPath={pathname}
+        client:load
+      />
+    </div>
+  </div>
+</header>

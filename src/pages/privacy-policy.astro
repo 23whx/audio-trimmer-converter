@@ -1,0 +1,39 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import i18next, { t } from 'i18next';
+import '../styles/tailwind.css';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../lib/i18n/locales';
+
+type Props = {
+  locale?: SupportedLocale;
+};
+
+const { locale = SUPPORTED_LOCALES[0] } = Astro.props as Props;
+
+if (i18next.language !== locale) {
+  await i18next.changeLanguage(locale);
+}
+---
+
+<BaseLayout
+  title={`${t('common:footer.privacy')} | ${t('common:appName')}`}
+  description={t('common:footer.privacy')}
+  lang={i18next.language}
+>
+  <article class="prose prose-sm max-w-3xl space-y-4 pt-28">
+    <h1 class="text-3xl font-bold text-success-dark">{t('common:footer.privacy')}</h1>
+    <p class="text-sm text-neutral-dark/80">
+      We respect your privacy. Processed audio never leaves your browser unless you enable cloud
+      exports. Usage analytics are aggregated and anonymized.
+    </p>
+    <h2 class="text-xl font-semibold text-success-dark">Data processing</h2>
+    <p class="text-sm text-neutral-dark/80">
+      Uploads are handled with WebAssembly and Web Audio APIs. Temporary data is purged once you
+      close the session.
+    </p>
+    <h2 class="text-xl font-semibold text-success-dark">Contact</h2>
+    <p class="text-sm text-neutral-dark/80">
+      For privacy queries email us at privacy@audiotrimmer.app.
+    </p>
+  </article>
+</BaseLayout>

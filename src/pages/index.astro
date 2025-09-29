@@ -1,0 +1,89 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/tailwind.css';
+import { SUPPORTED_LOCALES, type SupportedLocale, DEFAULT_LOCALE } from '../lib/i18n/language-manager';
+import { translations } from '../lib/i18n/translations';
+
+type PageProps = {
+  locale?: SupportedLocale;
+};
+
+const props = (Astro.props ?? {}) as PageProps;
+const locale = props.locale ?? DEFAULT_LOCALE;
+
+// 获取当前语言的翻译
+const t = (key: keyof typeof translations[SupportedLocale]) =>
+  translations[locale][key] || translations[DEFAULT_LOCALE][key] || key;
+---
+
+<BaseLayout
+  title={`${t('appName')} | ${t('heroHeading')}`}
+  description={t('heroSubheading')}
+  lang={locale}
+>
+  <section id="hero" class="grid gap-10 pb-24 pt-24 md:grid-cols-2">
+    <div class="space-y-6">
+      <span
+        class="inline-flex items-center rounded-full bg-accent-light px-3 py-1 text-xs font-semibold uppercase text-accent-dark"
+        >{t('tagline')}</span
+      >
+      <h1 class="text-4xl font-bold tracking-tight text-success-dark sm:text-5xl">
+        {t('heroHeading')}
+      </h1>
+      <p class="text-lg text-neutral-dark/80">{t('heroSubheading')}</p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href={`/${locale === 'en' ? '' : locale + '/'}editor`}
+          class="rounded-full bg-success-dark px-6 py-3 text-sm font-semibold text-primary shadow-lg transition hover:bg-success"
+          >{t('heroGetStarted')}</a
+        >
+        <a
+          href="#features"
+          class="rounded-full border border-success-dark px-6 py-3 text-sm font-semibold text-success-dark transition hover:bg-success-light/60"
+          >{t('heroLearnMore')}</a
+        >
+      </div>
+    </div>
+    <div class="relative">
+      <div
+        class="absolute -inset-6 rounded-3xl bg-gradient-to-br from-success/40 via-primary to-accent/30 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="relative rounded-3xl border border-success/30 bg-primary/90 p-8 shadow-xl">
+        <p class="text-center text-neutral-dark/80">
+          {t('description')}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="space-y-6 py-16">
+    <h2 class="text-center text-3xl font-bold text-success-dark">{t('navFeatures')}</h2>
+    <div class="text-center text-neutral-dark/80">
+      <p>{t('featuresContent')}</p>
+    </div>
+  </section>
+
+  <section id="workflow" class="space-y-6 py-16">
+    <h2 class="text-center text-3xl font-bold text-success-dark">{t('navWorkflow')}</h2>
+    <div class="text-center text-neutral-dark/80">
+      <p>{t('workflowContent')}</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-16">
+    <div class="rounded-3xl border border-accent-light bg-primary/90 p-10 text-center shadow-lg">
+      <h2 class="text-3xl font-bold text-success-dark">{t('navPricing')}</h2>
+      <p class="mt-3 text-sm text-neutral-dark/80">
+        {t('freeWhileBeta')}
+      </p>
+      <a
+        href="/editor"
+        class="mt-6 inline-flex rounded-full bg-accent-dark px-6 py-3 text-sm font-semibold text-primary shadow transition hover:bg-accent"
+      >
+        {t('openEditor')}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

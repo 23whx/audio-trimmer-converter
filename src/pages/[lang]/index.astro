@@ -1,0 +1,12 @@
+﻿---
+import HomePage from '../index.astro';
+import { getStaticLocalePaths } from '../../lib/i18n/locales';
+
+export function getStaticPaths() {
+  return getStaticLocalePaths();
+}
+
+const { lang } = Astro.params;
+---
+
+<HomePage locale={lang} />

@@ -1,0 +1,47 @@
+---
+import {
+  detectLocaleFromPath,
+  type SupportedLocale,
+  SUPPORTED_LOCALES,
+  DEFAULT_LOCALE
+} from '../../lib/i18n/language-manager';
+import { translations } from '../../lib/i18n/translations';
+
+const pathname = Astro.url.pathname || '/';
+const fromPath = detectLocaleFromPath(pathname);
+const currentLocale: SupportedLocale =
+  (typeof fromPath === 'string' && SUPPORTED_LOCALES.includes(fromPath as SupportedLocale))
+    ? fromPath as SupportedLocale
+    : DEFAULT_LOCALE;
+
+const t = (key: keyof typeof translations[SupportedLocale]) =>
+  translations[currentLocale][key] || translations[DEFAULT_LOCALE][key] || key;
+
+const year = new Date().getFullYear();
+---
+
+<footer id="policies" class="border-t border-success/20 bg-neutral-light/80 py-10">
+  <div
+    class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 text-sm text-neutral-dark/80 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+  >
+    <div class="flex flex-col gap-2 sm:gap-1">
+      <p>&copy; {year} {t('appName')}. All rights reserved.</p>
+      <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-dark/60">
+        <span>Created by Rollkey</span>
+        <a href="mailto:wanghongxiang23@gmail.com" class="hover:text-success-dark transition-colors flex items-center gap-1">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+          wanghongxiang23@gmail.com
+        </a>
+        <a href="https://x.com/Rollkey4" target="_blank" rel="noopener noreferrer" class="hover:text-success-dark transition-colors flex items-center gap-1">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+          </svg>
+          @Rollkey4
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

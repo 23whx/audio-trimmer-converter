@@ -1,0 +1,14 @@
+﻿---
+import Page from '../privacy-policy.astro';
+import i18next from 'i18next';
+import { getStaticLocalePaths } from '../../lib/i18n/locales';
+
+export function getStaticPaths() {
+  return getStaticLocalePaths();
+}
+
+const { lang } = Astro.params;
+await i18next.changeLanguage(lang);
+---
+
+<Page locale={lang} />

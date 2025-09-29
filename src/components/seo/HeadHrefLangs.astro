@@ -1,0 +1,28 @@
+---
+import { SUPPORTED_LOCALES } from '../../lib/i18n/locales';
+
+const currentUrl = Astro.url.href;
+const currentPath = Astro.url.pathname;
+const defaultLocale = SUPPORTED_LOCALES[0];
+
+// 简单的本地化URL生成函数
+function localizeUrl(url: string, locale: string): string {
+  const baseUrl = url.replace(currentPath, '');
+  if (locale === 'en') {
+    // 英文是默认语言，不需要前缀
+    return `${baseUrl}${currentPath.replace(/^\/[a-z]{2}\//, '/')}`;
+  }
+  // 其他语言添加语言前缀
+  const cleanPath = currentPath.replace(/^\/[a-z]{2}\//, '/');
+  return `${baseUrl}/${locale}${cleanPath}`;
+}
+---
+
+<>
+  {
+    SUPPORTED_LOCALES.map((lang) => (
+      <link rel="alternate" hreflang={lang} href={localizeUrl(currentUrl, lang)} />
+    ))
+  }
+  <link rel="alternate" hreflang="x-default" href={localizeUrl(currentUrl, defaultLocale)} />
+</>

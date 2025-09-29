@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EditorShell from '../../components/editor/EditorShell';
+import '../../styles/tailwind.css';
+import { translations } from '../../lib/i18n/translations';
+import { getStaticLocalePaths } from '../../lib/i18n/locales';
+
+export function getStaticPaths() {
+  return getStaticLocalePaths();
+}
+
+const { lang } = Astro.params;
+console.log('[editor.[lang].astro] render', { lang });
+const t = translations[lang as keyof typeof translations] || translations.en;
+
+// EditorShell 现在内部管理翻译，不需要传递 copy 参数
+---
+
+<BaseLayout
+  title={t.pageTitle}
+  description={t.description}
+  lang={lang}
+>
+  <section>
+    <EditorShell client:only="react" />
+  </section>
+</BaseLayout>
