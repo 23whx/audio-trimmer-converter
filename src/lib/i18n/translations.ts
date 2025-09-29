@@ -4,7 +4,7 @@ export const translations = {
     appName: "MediaTrim",
     title: "Video & Audio Editor - Free Online Trimmer",
     pageTitle: "Free Video to Audio Converter & Trimmer | Extract Audio from Video, Cut & Edit",
-    description: "Free online tool to extract audio from video, trim audio files, and convert between formats. Convert MP4 to MP3, cut audio segments, export in multiple formats. No upload to servers.",
+    description: "Simple online tool to extract audio from video, trim audio files, and convert between formats. Convert MP4 to MP3, cut audio segments, export in multiple formats for convenience.",
 
     // 导航
     navFeatures: "Features",
@@ -15,7 +15,7 @@ export const translations = {
 
     // 首页内容 - SEO优化
     heroHeading: "Extract Audio from Video & Trim Audio Files",
-    heroSubheading: "Convert video to audio, trim and cut audio segments, export in multiple formats (MP3, WAV, AAC). All processing happens in your browser - no uploads required.",
+    heroSubheading: "Convert video to audio, trim and cut audio segments, export in multiple formats (MP3, WAV, AAC). Simple browser-based editing for basic audio tasks.",
     heroGetStarted: "Start Editing",
     heroLearnMore: "How It Works",
     tagline: "Video & Audio Editor",
@@ -105,7 +105,7 @@ export const translations = {
     
     // 首页内容 - SEO优化
     freeWhileBeta: "100% Free - No Registration Required",
-    featuresContent: "Extract audio from video files, trim and cut audio segments, convert between formats. Upload MP4/AVI/MOV videos to extract audio as MP3/WAV/AAC. Precision audio editing with multiple export options.",
+    featuresContent: "Extract audio from video files, trim and cut audio segments, convert between formats. Upload MP4/AVI/MOV videos to extract audio as MP3/WAV/AAC. Basic audio editing with multiple export options.",
     workflowContent: "Simple 3-step process: Upload your media file, edit with precision tools, then download your trimmed video or audio instantly."
   },
   zh: {
@@ -113,7 +113,7 @@ export const translations = {
     appName: "媒体修剪器",
     title: "视频转音频工具 - 免费在线音频剪切器",
     pageTitle: "免费视频转音频工具 | 从视频提取音频，剪切编辑，多格式导出",
-    description: "免费在线视频转音频工具。从视频提取音频，剪切音频片段，转换格式。支持MP4转MP3，音频剪切，导出多种格式。无需上传服务器。",
+    description: "简单在线视频转音频工具。从视频提取音频，剪切音频片段，转换格式。支持MP4转MP3，音频剪切，导出多种格式，方便使用。",
 
     // 导航
     navFeatures: "功能特性",
@@ -124,7 +124,7 @@ export const translations = {
 
     // 首页内容 - SEO优化
     heroHeading: "从视频提取音频，剪切音频文件",
-    heroSubheading: "视频转音频，剪切音频片段，导出多种格式（MP3、WAV、AAC）。所有处理在您的浏览器中进行，无需上传。",
+    heroSubheading: "视频转音频，剪切音频片段，导出多种格式（MP3、WAV、AAC）。简单的浏览器端编辑，满足基本音频处理需求。",
     heroGetStarted: "开始使用",
     heroLearnMore: "了解更多",
     tagline: "音频编辑器",
@@ -214,7 +214,7 @@ export const translations = {
     
     // 首页内容 - SEO优化
     freeWhileBeta: "100% 免费 - 无需注册",
-    featuresContent: "从视频文件提取音频，剪切音频片段，格式转换。上传MP4/AVI/MOV视频提取为MP3/WAV/AAC音频。精确的音频编辑，多种导出选项。",
+    featuresContent: "从视频文件提取音频，剪切音频片段，格式转换。上传MP4/AVI/MOV视频提取为MP3/WAV/AAC音频。基础的音频编辑，多种导出选项。",
     workflowContent: "简单的三步流程：上传您的媒体文件，使用精确工具编辑，然后立即下载修剪后的视频或音频。"
   },
   ja: {
@@ -222,7 +222,7 @@ export const translations = {
     appName: "メディアトリム",
     title: "動画音声変換ツール - 無料オンライン音声カッター",
     pageTitle: "無料動画音声変換ツール | 動画から音声抽出、カット編集、複数形式出力",
-    description: "無料オンライン動画音声変換ツール。動画から音声を抽出、音声セグメントをカット、形式変換。MP4からMP3、音声カット、複数形式出力対応。サーバーアップロード不要。",
+    description: "シンプルなオンライン動画音声変換ツール。動画から音声を抽出、音声セグメントをカット、形式変換。MP4からMP3、音声カット、複数形式出力対応。便利な使用。",
 
     // 导航
     navFeatures: "機能",
@@ -233,7 +233,7 @@ export const translations = {
 
     // ホームページ内容 - SEO最適化
     heroHeading: "動画から音声を抽出、音声ファイルをトリミング",
-    heroSubheading: "動画を音声に変換、音声セグメントをカット、複数形式（MP3、WAV、AAC）で出力。すべての処理はブラウザ内で実行、アップロード不要。",
+    heroSubheading: "動画を音声に変換、音声セグメントをカット、複数形式（MP3、WAV、AAC）で出力。シンプルなブラウザベース編集で基本的な音声処理。",
     heroGetStarted: "始める",
     heroLearnMore: "詳しく見る",
     tagline: "オーディオエディター",
@@ -323,7 +323,7 @@ export const translations = {
     
     // ホームページ内容 - SEO最適化
     freeWhileBeta: "100% 無料 - 登録不要",
-    featuresContent: "動画ファイルから音声を抽出、音声セグメントをカット、形式変換。MP4/AVI/MOVをアップロードしてMP3/WAV/AAC音声として抽出。精密な音声編集、複数出力オプション。",
+    featuresContent: "動画ファイルから音声を抽出、音声セグメントをカット、形式変換。MP4/AVI/MOVをアップロードしてMP3/WAV/AAC音声として抽出。基本的な音声編集、複数出力オプション。",
     workflowContent: "シンプルな3ステッププロセス：メディアファイルをアップロードし、精密ツールで編集し、トリミングされた動画または音声を即座にダウンロードします。"
   }
 };
