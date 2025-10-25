@@ -1,0 +1,45 @@
+﻿{
+  "hero": {
+    "heading": "Precision audio editing in your browser",
+    "subheading": "Trim, compress, transcribe, and export studio-ready audio without leaving your tab.",
+    "primary": "Launch editor",
+    "secondary": "Watch demo"
+  },
+  "features": [
+    {
+      "title": "Lossless trimming & conversion",
+      "description": "Cut and convert between MP3, WAV, AAC, FLAC, and more using ffmpeg.wasm with zero backend latency."
+    },
+    {
+      "title": "Smart file intelligence",
+      "description": "Automatically split oversized uploads into seamless segments and apply lossless compression to shrink transfer size."
+    },
+    {
+      "title": "AI subtitles & transcripts",
+      "description": "Generate multilingual transcripts and subtitle files with Whisper-level accuracy directly in the editor."
+    },
+    {
+      "title": "Silence detection",
+      "description": "Detect pauses and quiet zones to accelerate dialogue cleanup and podcast editing."
+    }
+  ],
+  "workflow": {
+    "title": "From upload to publish in minutes",
+    "steps": [
+      "Upload audio or video via drag & drop.",
+      "Visualize the waveform, trim, split, and normalize levels.",
+      "Detect silences, auto-generate subtitles, and tweak metadata.",
+      "Export in your preferred format or download SRT/VTT files."
+    ]
+  },
+  "faq": [
+    {
+      "question": "How large can my files be?",
+      "answer": "Files up to 2 GB are optimized in-browser; larger uploads are auto-split into manageable chunks."
+    },
+    {
+      "question": "Is my audio processed securely?",
+      "answer": "Everything runs locally in your browser unless you enable optional cloud backups."
+    }
+  ]
+}

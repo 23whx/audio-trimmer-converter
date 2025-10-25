@@ -1,0 +1,24 @@
+﻿{
+  "appName": "Audio Trimmer & Converter",
+  "tagline": "Trim, convert, and subtitle your audio in seconds.",
+  "nav": {
+    "features": "Features",
+    "workflow": "Workflow",
+    "pricing": "Pricing",
+    "legal": "Policies"
+  },
+  "cta": {
+    "openEditor": "Open Editor",
+    "contact": "Contact"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "简体中文",
+    "ja": "日本語"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}

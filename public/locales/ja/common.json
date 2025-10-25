@@ -1,0 +1,24 @@
+﻿{
+  "appName": "オーディオトリマー & コンバーター",
+  "tagline": "数秒でトリミング・変換・字幕作成。",
+  "nav": {
+    "features": "機能",
+    "workflow": "ワークフロー",
+    "pricing": "料金",
+    "legal": "ポリシー"
+  },
+  "cta": {
+    "openEditor": "エディターを開く",
+    "contact": "お問い合わせ"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "简体中文",
+    "ja": "日本語"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}

@@ -1,0 +1,32 @@
+﻿{
+  "title": "オーディオエディター",
+  "upload": {
+    "heading": "音声・動画をアップロード",
+    "description": "ファイルをドラッグ & ドロップ、または選択してください。大容量は自動分割されます。",
+    "button": "ファイルを選択"
+  },
+  "timeline": {
+    "trim": "範囲をトリム",
+    "split": "自動分割",
+    "normalize": "正規化",
+    "detectSilence": "無音検出",
+    "generateSubtitles": "字幕生成"
+  },
+  "export": {
+    "heading": "書き出し",
+    "format": "フォーマット選択",
+    "quality": "品質",
+    "download": "音声をダウンロード",
+    "subtitle": "字幕をダウンロード"
+  },
+  "status": {
+    "loading": "ワークスペースを準備中…",
+    "splitting": "大容量ファイルを分割中…",
+    "compressing": "ロスレス圧縮を適用中…",
+    "detectingSilence": "無音区間を検出中…",
+    "transcribing": "音声を書き起こし中…",
+    "exporting": "ダウンロードを準備中…",
+    "ready": "準備完了",
+    "error": "エラーが発生しました"
+  }
+}

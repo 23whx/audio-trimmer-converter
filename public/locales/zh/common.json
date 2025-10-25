@@ -1,0 +1,24 @@
+﻿{
+  "appName": "音频裁剪与转换",
+  "tagline": "几秒内完成音频裁剪、格式转换与字幕生成。",
+  "nav": {
+    "features": "功能亮点",
+    "workflow": "工作流程",
+    "pricing": "定价",
+    "legal": "政策"
+  },
+  "cta": {
+    "openEditor": "打开编辑器",
+    "contact": "联系我们"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "简体中文",
+    "ja": "日本語"
+  },
+  "footer": {
+    "rights": "版权所有。",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
+  }
+}

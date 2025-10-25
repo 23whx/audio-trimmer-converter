@@ -1,0 +1,32 @@
+﻿{
+  "title": "Audio editor",
+  "upload": {
+    "heading": "Upload audio or video",
+    "description": "Drag & drop your media or browse files to begin. Large files will be split automatically.",
+    "button": "Select file"
+  },
+  "timeline": {
+    "trim": "Trim selection",
+    "split": "Split automatically",
+    "normalize": "Normalize",
+    "detectSilence": "Detect pauses",
+    "generateSubtitles": "Generate subtitles"
+  },
+  "export": {
+    "heading": "Export",
+    "format": "Choose format",
+    "quality": "Quality",
+    "download": "Download",
+    "subtitle": "Download subtitles"
+  },
+  "status": {
+    "loading": "Preparing workspace…",
+    "splitting": "Splitting large file…",
+    "compressing": "Applying lossless compression…",
+    "detectingSilence": "Detecting pauses…",
+    "transcribing": "Transcribing audio…",
+    "exporting": "Packing downloads…",
+    "ready": "Ready",
+    "error": "Error"
+  }
+}

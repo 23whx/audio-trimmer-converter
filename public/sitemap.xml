@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage - English (default) -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/" />
+  </url>
+  
+  <!-- Homepage - Chinese -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/zh/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/" />
+  </url>
+  
+  <!-- Homepage - Japanese -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/ja/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/" />
+  </url>
+  
+  <!-- Editor - English -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/editor</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/editor" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/editor" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/editor" />
+  </url>
+  
+  <!-- Editor - Chinese -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/zh/editor</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/editor" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/editor" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/editor" />
+  </url>
+  
+  <!-- Editor - Japanese -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/ja/editor</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audio-trimmer-converter.vercel.app/editor" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://audio-trimmer-converter.vercel.app/zh/editor" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://audio-trimmer-converter.vercel.app/ja/editor" />
+  </url>
+  
+  <!-- Legal pages -->
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/privacy-policy</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://audio-trimmer-converter.vercel.app/terms</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

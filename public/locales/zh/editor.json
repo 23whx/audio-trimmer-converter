@@ -1,0 +1,32 @@
+﻿{
+  "title": "音频编辑器",
+  "upload": {
+    "heading": "上传音频或视频",
+    "description": "拖拽或选择文件开始，超大文件会自动分割。",
+    "button": "选择文件"
+  },
+  "timeline": {
+    "trim": "裁剪选区",
+    "split": "自动分段",
+    "normalize": "音量归一化",
+    "detectSilence": "检测停顿",
+    "generateSubtitles": "生成字幕"
+  },
+  "export": {
+    "heading": "导出",
+    "format": "选择格式",
+    "quality": "质量",
+    "download": "下载音频",
+    "subtitle": "下载字幕"
+  },
+  "status": {
+    "loading": "准备工作区…",
+    "splitting": "正在自动分割大文件…",
+    "compressing": "正在执行无损压缩…",
+    "detectingSilence": "正在检测停顿…",
+    "transcribing": "正在转写音频…",
+    "exporting": "正在打包下载…",
+    "ready": "就绪",
+    "error": "发生错误"
+  }
+}
