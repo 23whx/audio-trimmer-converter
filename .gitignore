@@ -100,7 +100,7 @@ jspm_packages/
 
 # Gatsby files
 .cache/
-public
+# public - Astro项目需要提交public目录
 
 # Storybook build outputs
 .out

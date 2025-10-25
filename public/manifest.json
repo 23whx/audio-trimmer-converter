@@ -1,0 +1,51 @@
+{
+  "name": "MediaTrim - Video & Audio Editor",
+  "short_name": "MediaTrim",
+  "description": "Simple online tool to extract audio from video, trim audio files, and convert between formats.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F4",
+  "theme_color": "#22C55E",
+  "orientation": "any",
+  "categories": ["productivity", "utilities", "multimedia"],
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}
